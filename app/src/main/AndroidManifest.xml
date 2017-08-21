@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gdgkazan.summer_school_2017">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="com.gdgkazan.summer_school_2017.AppDelegate"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.gdgkazan.summer_school_2017.MainActivity">
+
+        </activity>
+
+        <activity android:name=".lessons.lesson_1.FirstLessonActivity" />
+
+        <activity android:name=".lessons.lesson_1.FrameLayoutActivity" />
+
+        <activity android:name=".lessons.lesson_1.LinearLayoutActivity" />
+
+        <activity android:name=".lessons.lesson_1.RelativeLayoutActivity" />
+
+        <activity android:name=".lessons.lesson_1.MarginActivity" />
+
+        <activity android:name=".lessons.lesson_1.PaddingActivity" />
+
+        <activity android:name=".lessons.lesson_2.SecondLessonActivity" />
+
+        <activity
+            android:name=".lessons.lesson_3.activities.BeersActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".lessons.lesson_4.activities.FourthLessonActivity" />
+
+        <activity android:name=".lessons.lesson_4.activities.IntentExampleActivity" />
+
+        <activity android:name=".lessons.lesson_4.activities.ChartsExampleActivity" />
+
+        <activity android:name=".homeworks.homework_1.activities.FirstHomeworkActivity" />
+
+        <activity android:name=".homeworks.homework_1.activities.CalculatorActivity" />
+        <activity android:name=".lessons.lesson_4.activities.WeatherActivity"/>
+
+        <activity android:name=".lessons.lesson_4.activities.ChuckNorrisActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".homeworks.homework_1.activities.UserProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>

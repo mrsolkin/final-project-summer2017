@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">Summer school 2017</string>
+
+    <!-- Main screen -->
+    <string name="main.lessons">Занятия</string>
+    <string name="main.lesson1.title">Урок 1</string>
+    <string name="main.lesson1.subtitle">XML. Верстка</string>
+    <string name="main.lesson2.title">Урок 2</string>
+    <string name="main.lesson2.subtitle">Activity. RecyclerView</string>
+    <string name="main.lesson3.title">Урок 3</string>
+    <string name="main.lesson3.subtitle">Работа с сетью</string>
+    <string name="main.lesson4.title">Урок 4</string>
+    <string name="main.lesson4.subtitle">Manifest. Intent. Charts</string>
+    <string name="main.homework">Домашние задания</string>
+    <string name="main.homework1.title">Задание 1</string>
+    <string name="main.homework1.subtitle">Калькулятор. Профиль пользователя</string>
+
+    <!-- Lesson 1. XML -->
+    <string name="lesson1.frame_layout">Frame Layout</string>
+    <string name="lesson1.linear_layout">Linear Layout</string>
+    <string name="lesson1.relative_layout">Linear Layout</string>
+    <string name="lesson1.margin">Margin</string>
+    <string name="lesson1.padding">Padding</string>
+
+    <!-- Lesson 2. RecyclerView -->
+    <string name="lesson2.add_elements">Добавить 5 элементов</string>
+
+    <!-- Lesson 3. Beer screen -->
+    <string name="beer.abv">abv</string>
+    <string name="beer.ibu">ibu</string>
+    <string name="beer.srm">srm</string>
+    <string name="beer.description">Описание</string>
+
+    <!-- Lesson 4 -->
+    <string name="lesson4.intent">Intent</string>
+    <string name="lesson4.charts">Графики</string>
+
+    <!-- Homework 1. XML -->
+    <string name="homework1.calculator">Калькулятор</string>
+    <string name="homework1.user_profile">Профиль пользователя</string>
+    <string name="user_profile.name">Сергей Швецов</string>
+    <string name="user_profile.email">sergey@mail.ru</string>
+    <string name="user_profile.profie">Мой профиль</string>
+    <string name="user_profile.messages">Сообщения</string>
+    <string name="user_profile.setting">Настройки</string>
+    <string name="user_profile.notifications.title">Уведомления</string>
+    <string name="user_profile.notifications.subtitle">Присылать уведомления</string>
+    <string name="user_profile.subscription.title">Подписка</string>
+    <string name="user_profile.subscription.subtitle">Присылать новости на e-mail</string>
+
+    <!-- Homework 2. XML -->
+    <string name="homework2.activity">Activity</string>
+    <string name="homework2.counter">1. Счетчик</string>
+    <string name="homework2.who_wants_to_be_a_millionaire">2. Кто хочет стать миллионером</string>
+    <string name="homework2.recycler_view">RecyclerView</string>
+    <string name="homework2.countries">1. Страны</string>
+    <string name="homework2.posts">2. Посты</string>
+
+    <!-- Network -->
+    <string name="network.loading">Загрузка…</string>
+    <string name="network.error">Ошибка запроса</string>
+
+</resources>
