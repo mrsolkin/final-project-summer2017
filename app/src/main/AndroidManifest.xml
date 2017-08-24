@@ -5,33 +5,27 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="com.gdgkazan.summer_school_2017.AppDelegate"
+        android:name=".AppDelegate"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.gdgkazan.summer_school_2017.MainActivity">
-
-        </activity>
-
         <activity android:name=".lessons.lesson_4.activities.FourthLessonActivity" />
-
         <activity android:name=".lessons.lesson_4.activities.IntentExampleActivity" />
-
         <activity android:name=".lessons.lesson_4.activities.ChartsExampleActivity" />
-
-        <activity android:name=".lessons.lesson_4.activities.WeatherActivity"/>
-
         <activity android:name=".lessons.lesson_4.activities.CoinsActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-
+        <activity
+            android:name=".lessons.lesson_4.activities.ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

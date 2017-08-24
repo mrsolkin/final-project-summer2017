@@ -12,7 +12,6 @@ import retrofit2.http.Query;
 
 public interface CoinService {
 
-    @GET("ticker")
-    Call<CoinInfo> getPrice(@Query("limit") int limit);
-
+    @GET("data/coinlist")
+    Call<CoinList> getPrice();
 }

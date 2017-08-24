@@ -10,14 +10,14 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-/**
- * @author Valiev Timur.
- */
 public final class ApiFactory {
 
-    private static final String API_BASE_URL = "https://api.coinmarketcap.com/v1/";
+    private static final String API_FOR_LIST = "https://www.cryptocompare.com/api/";
 
-    private static Retrofit sRetrofit;
+    private static final String API_FOR_HISTORY = "https://min-api.cryptocompare.com/";
+
+    private static Retrofit sRetrofit_list;
+    private static Retrofit sRetrofit_history;
 
     private static OkHttpClient sHttpClient;
 
@@ -26,15 +26,23 @@ public final class ApiFactory {
     }
 
     @NonNull
-    public static Retrofit getRetrofitInstance() {
+    public static Retrofit getRetrofitInstance(Retrofit sRetrofit, String api_url) {
         if (sRetrofit == null) {
             sRetrofit = new Retrofit.Builder()
-                    .baseUrl(API_BASE_URL)
+                    .baseUrl(api_url)
                     .client(sHttpClient == null ? sHttpClient = provideClient() : sHttpClient)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
         return sRetrofit;
+    }
+
+    public static Retrofit getsRetrofitInstanceForList(){
+        return getRetrofitInstance(sRetrofit_list, API_FOR_LIST);
+    }
+
+    public static Retrofit getsRetrofitInstanceForHistory(){
+        return getRetrofitInstance(sRetrofit_history, API_FOR_HISTORY);
     }
 
     private static OkHttpClient provideClient() {
