@@ -15,7 +15,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public final class ApiFactory {
 
-    private static final String API_BASE_URL = "https://api.icndb.com";
+    private static final String API_BASE_URL = "https://api.coinmarketcap.com/v1/";
 
     private static Retrofit sRetrofit;
 

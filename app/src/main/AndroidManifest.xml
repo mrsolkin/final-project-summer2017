@@ -16,36 +16,15 @@
 
         </activity>
 
-        <activity android:name=".lessons.lesson_1.FirstLessonActivity" />
-
-        <activity android:name=".lessons.lesson_1.FrameLayoutActivity" />
-
-        <activity android:name=".lessons.lesson_1.LinearLayoutActivity" />
-
-        <activity android:name=".lessons.lesson_1.RelativeLayoutActivity" />
-
-        <activity android:name=".lessons.lesson_1.MarginActivity" />
-
-        <activity android:name=".lessons.lesson_1.PaddingActivity" />
-
-        <activity android:name=".lessons.lesson_2.SecondLessonActivity" />
-
-        <activity
-            android:name=".lessons.lesson_3.activities.BeersActivity"
-            android:screenOrientation="portrait" />
-
         <activity android:name=".lessons.lesson_4.activities.FourthLessonActivity" />
 
         <activity android:name=".lessons.lesson_4.activities.IntentExampleActivity" />
 
         <activity android:name=".lessons.lesson_4.activities.ChartsExampleActivity" />
 
-        <activity android:name=".homeworks.homework_1.activities.FirstHomeworkActivity" />
-
-        <activity android:name=".homeworks.homework_1.activities.CalculatorActivity" />
         <activity android:name=".lessons.lesson_4.activities.WeatherActivity"/>
 
-        <activity android:name=".lessons.lesson_4.activities.ChuckNorrisActivity">
+        <activity android:name=".lessons.lesson_4.activities.CoinsActivity">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
@@ -53,9 +32,6 @@
 
         </activity>
 
-        <activity
-            android:name=".homeworks.homework_1.activities.UserProfileActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

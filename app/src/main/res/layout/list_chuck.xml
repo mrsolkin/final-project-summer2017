@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/joke"
-    tools:text="Joke sample "
-    android:textSize="20dp"
-
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android" />
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="2dp"
+    card_view:contentPadding="4dp">
+
+    <TextView
+
+        android:id="@+id/joke"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:textSize="20dp"
+        tools:text="Joke sample " />
+</android.support.v7.widget.CardView>
+
