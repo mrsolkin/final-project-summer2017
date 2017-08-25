@@ -90,7 +90,9 @@ public class ScrollingActivity extends AppCompatActivity {
         // Если на экране отображается больше 60 значение, то подписи будут скрываться
         mLineChart.setMaxVisibleValueCount(60);
         mLineChart.setDrawGridBackground(false);
-        mLineChart.setGridBackgroundColor(Color.YELLOW);
+//        mLineChart.setBorderColor(Color.YELLOW);
+//        mLineChart.setBorderWidth((float) 0.5);
+//        mLineChart.setBackgroundColor(Color.YELLOW);
         // Устанавливаем что ось x будет подстраиваться под максимальное значение
 //        mLineChart.setFitBars(true);
         XAxis xAxis = mLineChart.getXAxis();
