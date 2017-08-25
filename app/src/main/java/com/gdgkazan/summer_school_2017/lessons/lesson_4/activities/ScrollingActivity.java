@@ -1,6 +1,7 @@
 package com.gdgkazan.summer_school_2017.lessons.lesson_4.activities;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -16,12 +17,18 @@ import com.gdgkazan.summer_school_2017.lessons.lesson_4.openweather.API.CoinHist
 import com.gdgkazan.summer_school_2017.lessons.lesson_4.openweather.API.CryptocoinHistoryService;
 import com.gdgkazan.summer_school_2017.lessons.lesson_4.openweather.API.Datum;
 import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.AxisBase;
+import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -82,11 +89,19 @@ public class ScrollingActivity extends AppCompatActivity {
 
         // Если на экране отображается больше 60 значение, то подписи будут скрываться
         mLineChart.setMaxVisibleValueCount(60);
-
         mLineChart.setDrawGridBackground(false);
-
+        mLineChart.setGridBackgroundColor(Color.YELLOW);
         // Устанавливаем что ось x будет подстраиваться под максимальное значение
 //        mLineChart.setFitBars(true);
+        XAxis xAxis = mLineChart.getXAxis();
+//        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+        xAxis.setValueFormatter(new IAxisValueFormatter() {
+            @Override
+            public String getFormattedValue(float value, AxisBase axis) {
+                SimpleDateFormat sdf = new SimpleDateFormat("dd MMM");
+                return sdf.format(new Date(new Float(value).longValue()));
+            }
+        });
     }
 
     void getCryptocoinsHistory() {
@@ -101,7 +116,7 @@ public class ScrollingActivity extends AppCompatActivity {
 
                 List<Entry> entries = new ArrayList<Entry>();
                 for (Datum datum: mHistory.getData()) {
-                    entries.add(new Entry(datum.getTime(), datum.getClose()));
+                    entries.add(new Entry(datum.getTime()*1000L, datum.getClose()));
                 }
 
                 float coinprice = mHistory.getData().get(mHistory.getData().size()-1).getClose();

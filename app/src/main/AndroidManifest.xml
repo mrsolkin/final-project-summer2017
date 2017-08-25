@@ -11,7 +11,7 @@
         android:label="@string/app_name"
 
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme.Launcher">
         <activity android:name=".lessons.lesson_4.activities.FourthLessonActivity" />
         <activity android:name=".lessons.lesson_4.activities.IntentExampleActivity" />
         <activity android:name=".lessons.lesson_4.activities.ChartsExampleActivity" />
