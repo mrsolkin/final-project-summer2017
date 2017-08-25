@@ -46,6 +46,8 @@ public class ScrollingActivity extends AppCompatActivity {
     @BindView(R.id.name_symbol) public TextView name_symbol;
     @BindView(R.id.barChart)
     LineChart mLineChart;
+    @BindView(R.id.fab)
+    FloatingActionButton mFab;
 
     public static final String KEY_COIN_NAME = "COIN_NAME";
     public static final String KEY_COIN_PRICE = "COIN_PRICE";
@@ -79,6 +81,18 @@ public class ScrollingActivity extends AppCompatActivity {
 //                        .setAction("Action", null).show();
 //            }
 //        });
+
+        mFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_SEND);
+                i.setType("text/plain");
+                i.putExtra(Intent.EXTRA_TEXT, "Text"); // тут text заменить на то что хотим расшарить
+//                i.putExtra(Intent.EXTRA_SUBJECT, "Subject");
+                i = Intent.createChooser(i, "Отправить текущий курс");
+                startActivity(i);
+            }
+        });
     }
 
     private void setupChart() {
@@ -125,6 +139,14 @@ public class ScrollingActivity extends AppCompatActivity {
                 name_symbol.setText("1"+name+" = "+String.format("%.4f", coinprice)+"$");
 
                 LineDataSet dataSet = new LineDataSet(entries, "Test lbl");
+                dataSet.disableDashedLine();
+                dataSet.setLineWidth(2f);
+                dataSet.setDrawCircles(false);
+                dataSet.setColor(Color.BLUE);
+                dataSet.setDrawFilled(true);
+                dataSet.setFillColor(Color.BLUE);
+                dataSet.setFillAlpha(65);
+                dataSet.setMode(LineDataSet.Mode.CUBIC_BEZIER);
                 LineData lineData = new LineData(dataSet);
                 mLineChart.setData(lineData);
                 mLineChart.invalidate();
